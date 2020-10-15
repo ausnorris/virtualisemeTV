@@ -1,0 +1,11 @@
+---
+version: 1
+flow:
+  flow_start:
+    next: action1
+  action1:
+    action: MQTT Provisioning Payload
+    next: action2
+  action2:
+    action: MQTT Publish
+    next: flow_end

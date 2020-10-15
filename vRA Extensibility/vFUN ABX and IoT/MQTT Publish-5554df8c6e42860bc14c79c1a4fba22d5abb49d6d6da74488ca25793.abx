@@ -1,0 +1,14 @@
+---
+exportVersion: "1"
+exportId: "8a7480b0734871950173e78f35cd007c"
+name: "MQTT Publish"
+runtime: "python"
+entrypoint: "handler"
+timeoutSeconds: 600
+deploymentTimeoutSeconds: 600
+dependencies: "paho-mqtt"
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 300

@@ -1,0 +1,17 @@
+---
+exportVersion: "1"
+exportId: "8a7480b0734871950173ea9373a40190"
+name: "MQTT Failed"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  status: "ERROR"
+  mqttQueue: "vraneo/color"
+  mqttServer: "192.168.0.10"
+timeoutSeconds: 600
+deploymentTimeoutSeconds: 600
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 300

@@ -1,0 +1,7 @@
+---
+exportVersion: "1"
+exportId: "8a7480b0734871950173ea95fb0a0191"
+name: "MQTT Failed FLow"
+timeoutSeconds: 600
+actionType: "FLOW"
+memoryInMB: 300

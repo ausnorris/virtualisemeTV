@@ -1,0 +1,13 @@
+---
+exportVersion: "1"
+exportId: "8a7480ab71aae4d10171ce02f55200e7"
+name: "Hello World"
+runtime: "python"
+entrypoint: "handler"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 300

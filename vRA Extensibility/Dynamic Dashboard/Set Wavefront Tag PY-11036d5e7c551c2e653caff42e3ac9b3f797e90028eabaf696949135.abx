@@ -1,0 +1,16 @@
+---
+exportVersion: "1"
+exportId: "8a5e09b97356500f0173c19a7d975791"
+name: "Set Wavefront Tag PY"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  bearer: ""
+timeoutSeconds: 600
+deploymentTimeoutSeconds: 900
+dependencies: "requests"
+actionType: "SCRIPT"
+provider: "aws"
+configuration:
+  const_aws-iam_role: "lambda-admin"
+memoryInMB: 300

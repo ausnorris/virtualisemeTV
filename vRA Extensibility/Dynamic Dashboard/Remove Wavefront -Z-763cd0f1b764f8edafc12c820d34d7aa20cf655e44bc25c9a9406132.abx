@@ -1,0 +1,16 @@
+---
+exportVersion: "1"
+exportId: "8a7695d66df83f0d016e0f6d42de3101"
+name: "Remove Wavefront -Z"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  bearer: ""
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+dependencies: "requests"
+actionType: "SCRIPT"
+provider: "aws"
+configuration:
+  const_aws-iam_role: "lambda-admin"
+memoryInMB: 150

@@ -1,0 +1,18 @@
+---
+exportVersion: "1"
+exportId: "8a76a16c6df83f36016e0f6775362a4a"
+name: "Create Wavefront Tag - Z"
+runtime: "nodejs"
+entrypoint: "handler"
+inputs:
+  target: "World"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+actionType: "SCRIPT"
+provider: "aws"
+configuration:
+  const-providers:
+  - "aws"
+  const_aws-iam_role: "lambda-admin"
+  const_azure-system_managed_identity: false
+memoryInMB: 150

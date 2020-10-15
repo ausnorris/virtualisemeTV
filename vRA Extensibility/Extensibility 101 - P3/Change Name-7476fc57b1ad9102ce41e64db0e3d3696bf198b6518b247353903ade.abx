@@ -1,0 +1,17 @@
+---
+exportVersion: "1"
+exportId: "8a7480ab71aae4d101730999f27b0111"
+name: "Change Name"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  newName: "new-machine-name"
+  resourceNames:
+  - "machine-name"
+timeoutSeconds: 180
+deploymentTimeoutSeconds: 600
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 300

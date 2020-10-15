@@ -1,0 +1,7 @@
+---
+exportVersion: "1"
+exportId: "8a7695d66df83f0d016e0f69fb6430ff"
+name: "Assign Wavefront Flow - Z"
+timeoutSeconds: 600
+actionType: "FLOW"
+memoryInMB: 300

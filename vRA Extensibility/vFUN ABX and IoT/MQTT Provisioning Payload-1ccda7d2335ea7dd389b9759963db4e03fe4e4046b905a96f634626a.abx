@@ -1,0 +1,16 @@
+---
+exportVersion: "1"
+exportId: "8a7480b0734871950173e79580290086"
+name: "MQTT Provisioning Payload"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  mqttQueue: "vraneo/color"
+  mqttServer: "192.168.0.10"
+timeoutSeconds: 600
+deploymentTimeoutSeconds: 600
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 300
