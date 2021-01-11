@@ -1,0 +1,28 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1 #TKG API endpoint
+kind: TanzuKubernetesCluster #required parameter
+metadata:
+    name: devtkgcluster01 #cluster name, user defined
+    namespace: dev #supervisor namespace
+spec:
+    distribution:
+        version:  v1.17 #resolved kubernetes version
+    topology:
+        controlPlane:
+            count: 1 #number of control plane nodes
+            class: best-effort-small #vmclass for control plane nodes
+            storageClass: vsan-default-storage-policy
+        workers:
+             count: 3 #number of worker nodes
+             class: best-effort-small #vmclass for worker nodes
+             storageClass: vsan-default-storage-policy
+    settings:
+        network:
+            cni:
+                name: calico
+            services:
+                cidrBlocks: ["10.150.0.0/16"] #Cannot overlap with Supervisor Cluster
+            pods:
+                cidrBlocks: ["10.151.0.0/16"] #Cannot overlap with Supervisor Cluster
+        storage:
+            classes: ["vsan-default-storage-policy"]
+            defaultClass: vsan-default-storage-policy
