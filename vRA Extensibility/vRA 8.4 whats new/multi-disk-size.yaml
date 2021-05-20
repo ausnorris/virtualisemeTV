@@ -1,0 +1,36 @@
+formatVersion: 1
+name: Multi Disk Multi Size
+version: 1
+inputs:
+  disksize:
+    type: array
+    minItems: 2
+    maxItems: 2
+    items:
+      type: object
+      properties:
+        size:
+          type: integer
+resources:
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+  app:
+    type: Cloud.Machine
+    allocatePerInstance: true
+    properties:
+      flavor: small
+      image: ubuntu
+      attachedDisks: '${map_to_object(resource.disk[*].id, "source")}'
+      constraints:
+        - tag: 'environment:dev'
+        - tag: 'platform:vsphere'
+      networks:
+        - network: '${resource.Cloud_Network_1.id}'
+  disk:
+    type: Cloud.Volume
+    allocatePerInstance: true
+    properties:
+      capacityGb: '${input.disksize[count.index].size}'
+      count: 2

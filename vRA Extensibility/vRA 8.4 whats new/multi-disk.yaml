@@ -1,0 +1,53 @@
+name: Multi-Disk
+version: 1.1.4
+inputs:
+  count:
+    type: integer
+    minimum: 1
+    maximum: 5
+    default: 1
+  platform:
+    type: string
+    enum:
+      - aws
+      - azure
+      - vsphere
+    default: aws
+resources:
+  machines:
+    type: Cloud.Machine
+    properties:
+      allocatePerInstance: true
+      mqtt: 1
+      cmdb: 'true'
+      flavor: small
+      image: CentOS
+      platform: '${input.platform}'
+      constraints:
+        - tag: '${''platform:'' + to_lower(input.platform)}'
+      count: '${input.count}'
+      networks:
+        - name: '${myNetwork.name}'
+          network: '${resource.myNetwork.id}'
+          securityGroups: []
+      tags:
+        - key: platform
+          value: '${input.platform}'
+        - key: createCi
+          value: 'yes'
+        - key: tagtestvsphere
+          value: hello
+        - key: cost
+          value: helloworld
+      attachedDisks: '${map_to_object(slice(resource.disks[*].id, 2*count.index, 2*(count.index + 1)), "source")}'
+  disks:
+    type: Cloud.Volume
+    properties:
+      count: '${2*input.count}'
+      capacityGb: 1
+  myNetwork:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: 'networkZone:private'
