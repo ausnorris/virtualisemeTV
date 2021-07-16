@@ -1,0 +1,47 @@
+name: hello world
+version: 1.1.4
+inputs:
+  count:
+    type: integer
+    minimum: 1
+    maximum: 5
+    default: 1
+  platform:
+    type: string
+    enum:
+      - aws
+      - azure
+      - vsphere
+    default: aws
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    metadata:
+      layoutPosition:
+        - 0
+        - 0
+    properties:
+      tmpl_user: administrator
+      tmpl_pass: win_pass
+      vcfqdn: vcsa.virtualiseme.com.au
+      requser: '${env.requestedBy}'
+      customizationSpec: 2019
+      flavor: medium
+      image: Windows 2019
+      runScript: 'yes'
+      constraints:
+        - tag: '${''platform:'' + to_lower(input.platform)}'
+      count: '${input.count}'
+      networks:
+        - name: '${myNetwork.name}'
+          network: '${resource.myNetwork.id}'
+  myNetwork:
+    type: Cloud.Network
+    metadata:
+      layoutPosition:
+        - 1
+        - 0
+    properties:
+      networkType: existing
+      constraints:
+        - tag: 'networkZone:private'

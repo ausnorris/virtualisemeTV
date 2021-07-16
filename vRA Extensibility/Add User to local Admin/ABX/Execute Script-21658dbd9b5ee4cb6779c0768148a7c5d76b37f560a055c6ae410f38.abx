@@ -1,0 +1,18 @@
+---
+exportVersion: "1"
+exportId: "8a7480367a153d25017a8395ec2201f1"
+name: "Execute Script"
+runtime: "powershell"
+entrypoint: "handler"
+inputs:
+  psecret:04faca5f-fef8-4f82-ad08-e4550d156958: ""
+  psecret:277f1d54-8d9b-4276-bf24-ea1a473580fb: ""
+  psecret:78cce54c-cf29-44fb-bad5-2e733fe73433: ""
+  psecret:8ef9e2c0-f421-4e05-970c-b7ee9421af01: ""
+timeoutSeconds: 900
+deploymentTimeoutSeconds: 900
+actionType: "SCRIPT"
+provider: "on-prem"
+configuration:
+  const_azure-system_managed_identity: false
+memoryInMB: 500
