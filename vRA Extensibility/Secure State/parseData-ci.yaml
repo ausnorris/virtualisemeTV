@@ -1,0 +1,72 @@
+---
+runtime: "python3"
+code: |
+  import json
+  import time
+  time.sleep(15)
+  from context import getInput, setOutput
+
+  payload = json.dumps(getInput('violationInput'))
+  rulesPayload = json.dumps(getInput('rulesInput'))
+  #Load JSON string into a dictionary
+  json_dicti = json.loads(payload)
+  json_rules = json.loads(rulesPayload)
+  risk = 0
+  riskstr = ""
+  #Loop along dictionary keys
+  
+  starttext = '''
+  <html>
+      <body>
+  '''
+  endtext = '''
+      </body>
+  </html>
+  '''
+  totalViolations = str(len(json_dicti["results"]))
+  starttext += '<p> Total violations ' + totalViolations +' </p><br>'
+  
+  print(totalViolations)
+  for key in json_dicti["results"]:
+      print(key["ruleId"])
+      for rule in json_rules["results"]:
+        #print(rule["id"] + ' ' + key["ruleId"])
+        if rule["id"] == key["ruleId"]:
+          print(rule["displayName"])
+          ruleName = rule["displayName"]
+          ruleLevel = rule["level"]
+      starttext+= '<p> RuleID:' + key["ruleId"] +' <br>'
+      starttext+= 'RuleName:' + ruleName +' <br>'
+      starttext+= 'Severity:' + ruleLevel +' <br>'
+      starttext+= 'Risk Score:' + str(key["riskScore"]) +' <br></p>'
+      if key["riskScore"] > risk:
+        risk = key["riskScore"]
+        print(str(key["riskScore"]))
+        riskstr = str(key["riskScore"])
+  starttext+= endtext
+  print(starttext)
+  setOutput("html", starttext);
+  setOutput("risk", riskstr);
+inputProperties:      # Enter fields for input section of a task
+  - name: violationInput
+    type: text
+    title: Violations
+    bindable: true
+    labelInfo: true
+    labelMessage: this is the output JSON of the SS rule violation
+
+  - name: rulesInput
+    type: text
+    title: rules
+    bindable: true
+    labelInfo: true
+    labelMessage: this is the rule dump from SS
+  # Available Input types
+
+outputProperties:     # Enter fields that would display in output section
+  - name: html
+    type: label
+    title: Derived HTML
+  - name: risk
+    type: label
+    title: risk score

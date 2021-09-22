@@ -1,0 +1,28 @@
+---
+runtime: "python3"
+code: |
+  import json
+  from context import getInput, setOutput
+
+  risk = int(getInput('risk'))
+  limit = getInput('limit')
+  if risk >= limit:
+    setOutput("failed", "true")
+  else:
+    setOutput("failed", "false")
+
+inputProperties:      # Enter fields for input section of a task
+  - name: risk
+    type: text
+    title: risk score
+    bindable: true
+    labelInfo: true
+  # Number input
+  - name: 'limit'
+    type: number
+    title: 'limit'
+
+outputProperties:     # Enter fields that would display in output section
+  - name: failed
+    type: label
+    title: Status Code

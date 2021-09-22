@@ -1,0 +1,134 @@
+---
+project: Project-Z
+kind: PIPELINE
+name: Secure State Deployment Example
+icon: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAwFBMVEX///8AZav/gUIAYKkAWqb/fDn/eTJ0msXV4+//18n/tJf4/P1RiL3P2umzz+VgmMcAXqj/fj3/fDc7grsAV6UAaK3/+vf/9fD/eTD/xKoAVaT/8er/zbf/6+Lk7vW80uX/3c//hUf/qoT/5dqrxt7w9/uUt9b/upz/r4z/08D/mmz/lGH/n3P/iU/c6/R6ps2Os9QUcLE6erX/p4D/xq7/lWOlvNiVstNJhrtpmsZ8o8tXkcIfdrUyfbf/jlj/cR0/VQcDAAALaklEQVR4nO1da1fiPBAGQnlBBNpyEeRWtAXkjgoLctn//69eVkmatBUaOkmrp8+nPWcxzJOZzCWZhEQiRowYMWLEiBEjRowYMWLEiBEjRowYUUJ+VugWzfXaNIvdQtYKWxxQWFmzVK4mEULqF07/Si5L60InbMlA0DF3+2T6RMkJpKLlbj0LW76AsIrbZdpNjma5M3+wwVqL6iV6Z5Lp5DYbtqS3IbutqNfonUk+ln4gR2uevKo+imNy+9O8jrn0qT8MdbnOhy00Bzq7tLeq0DlYeP1nuvxzTHWtuiioarpSLW/ni/X6z2K+26sVtw9C6iJsyf3BcioQocrho19gjbBjzjfIORPq4SesxuwruwKR+joveIa8fKd/X3V8uNqVLS83ulVGL2p1170U0WeLJatHtJYm6m3oVhh+qH81K8ubS8aq1bkMOW+G+UirI9n3+VdMaEmXxMoYCH1KUqRyBPEFnR6oW4EiBoNJiYn2XD4ju6EmR/0QJWFAdGkhN5wVQ35BrcaIrsUZJWL6BhGZCTLh5QsM6zWogNm9beWVCGZwW0oFN4bt2SuhiJaRq4v7wQmeUjlbi5FzqDOYNWSpIMOIQBnBSJa1l2I1Ulm4SfzoLV6URtdeilGyU6tKxNoErdQXxFDVCPlTSqrAppXfIDJbELKBoENUqBYBRiPTVYlMsTjHMqEdxHBrQjGwyQOhsyTuD2aPngT+dESUSII9VMJM/Cna5RnADM8PW4VQEWxHQsahTGGz23786ZvSXSypCVSfJf11ZMlKRDTO53OVyn4rlWaJrBq4ZHl35UQAqclDPyvLasmiAcxBit575ixJtFlI0WQXC6MCOr788iI7DFWVcWj1gXW4hBx1EZ2DOWuP5xP00GH2eJEYzRHtxBbLHWykqAA67v4iLZbjXihFXDehV1jP1vfypp/Bwv0fabAw5YX5+QsR8E61lfVAodstrkvVStpBU2j+en/+LpmbDlb3z6FCk9wLZEj2ECWXq/ns/KDa6avAb5rhwLWUvqtiFcrn43KhJQjeOULlMPY3i/uTHpHYM4BCWoKhXIBZ3m9hw5TrG865R2SPiwIDV78omqdFAMAMf0qjCD8Wv52hhUtVuPo+UsjOSWvJr9RhoUS1+/xChtaWaUz7fb606GzX+i9siWDR2Tk3GcLKaWjUcgbUUF13+68aSl5K46Ex1rXRSw1iLNPJT00uy/1wD1Gad1NdS6W0zLgRnOOC2ctEamW58O6ulAfjLaOnvqDp2l0z2GglmiBKH+Tsyl5ArTWtKykKen2UCzDelmkj3IitXHygOfg0TxaaMm493Dhgn9Ig2pthn2A+D3tufl/GehzcZKxFuvdM8E7sdbxMdMWLHl6Qw2fuIbOUhVZCbleuvU/rnuqzodRXL3yDWvZ5CVqG62Daw5TLPDW3RjW91+Ax1q3dzfMaZsNSzXhL6W4y44aH19H06bDtd+Cs3aUepgZrrZFbWYq2+pfONBtHt+dRlDfD39B271o6vCDx0JhmXBz0us0hN667+dfHLR9jr0mgeAytCeT5re42z0yvwQS/56HiNtaMPrhmrHbXTFi1YC030ty+JDNquTLRh8bRQ9Gpt8vRg3TNCD6u+w6ftYPL/FITwzPTfmitFPen9cmF2iNPGpVQGDbaHPS8tHIpphsTxUPjx29rj66Ilgu/MCYey6/ee7+Se7bvNNe0aLp+570g7Z5I2ZHwoeUVATITP+lK7d1jQSrKyHB/dBaWCpsDN79TpvLkN+WsvUw83JO+ctUepCNS7kUIr9rhlKVcdfzsIE8eGVDmOGA54tYuqX27uYk7eJ+Wnzs6XENz4LkgGT9FSiaAJmC/GP51e8+M3wTMiRevVOevvRcwq4TgZ+4cIp2W3zdu0BeMN81prBmbIT4ITe4BJPcLluGpaucqhDzQHjpqD4rhf3gZykzYaIaKPs4BbIU23xmONsM86ZqRmc/YDPW67+hwFbmVvSBthtbhzLAqM1YQhtPBrRtnnjiFIDdD3Ee3lPlgDmaY4dxsuY6h4mKIKyepZcWdSw5xI3dwzgbcgMgrh7iRcRMpKkN/F58c4kbuVELI2eQyxH1Br9DfxSeHuJE7yd++DskNyl/rS0k8DCXiy2CYx61PwA35vHIIHPkjhG5uuQxJk6XMphKpDMnlpiT0l/HJIXBksuEtsXySyxBvlyKJ3c5yGdoPe0B/G58c4kYm71Wk5R3fy2WYwFU+9A0uXjnEjUw2veWFRMkM7QPSvawtU8kM7achpF0ekc2Qet5Dkp3KZmgrUdbWvnSGthIlXVSTzpB6KkndyQgZ8hmSmPjv0UAJFENgaNtpEkmIGSEwTBTtHna0FF7uh8GQ8qf/3l8VbKmhMEzcU03Coh/gDodhgn5JNfm4E2mqITHMMxQR2nSFuZyQGCYs9s4TUvcfxY6QDCAshonE1vnmehqVt4u+WQRCx6cc4hgmzIrz5tPnoyNpGDyafuUQxzCR3XP+tgMPSFNSmAwT1tz7Fxx+D8OTGsseT+EAMzy3MMF3Kvicu27ZtRxhGOJ1ODgz1P302XPh6cxQN658sFByPvYDyrCBGTagGb6d+6K0awxP67F/7/oZjsAM8Y5sCzMcQDOc4M4vP51W+dl691pF6c+fGgNB5c956JfMlxjKEzDB2vjMsOe31dGaFYqL+XxbggG2UqN+tqUxMMOHswZT04DNjoEFqWNJgAdui5o6buDVogFPNTZ/7Q12XH6szhR14JCPwyG8C+MFbiFU7kCHreGZg08leIHDhTYFHbaNrV8J0DUOgyYWpQ4qyjueuBHIExOBMNVELBgcDYGN/ybg3Fs7As62QSzDgBv0Vhi407sO6E2x/0r1wjdS26C0EdiQJI/QI2CkJ6eQweKAOXaiQk73lYcFHraJ7w1oRyCCbfLMC0/Klje396DYkFNmMuP6OwzDN+UGq8jfp6EqJwzSbd0m2Xcd5FZJK3OLUTj3TwFgt88RJWoTAILE6rlU2BGwW2O/u9wkSswAbGaMSLmy4ggVWRH7UfavEBAlprTAQXFALiBylSuWCIb2K4W1KZn3XsA68YXYg863MXIQQdHuaMmRidemgbxNDnuZ00h86cyM9/eb/YB6/nhoUwySnxqEH38S2PngeAXfL+yLDw8rcu1Tn9ysRaNnjzLk//OO1xvxAWGfSbbti6366sZSMWffjlUiUBc6YbuIlOJ7j5NByx5BC3sP0RMN+5659tfg//s7imAq9L0LTwyoq/TcKWptQk2QDnZnGhh3GYriE5e/eT4qlAZD31/7FkOa4pRDEe/UDXxNiy5BlqJWv/PpD9tj+s+uHhiGiwb9rIU+9RO1aw365UHN12lamGilaHG14VU1Pq/oSVGO0fSiNAyaYko/XlZjbaAxH789H5KI5pFWilZ/uxC8c1PmsZZ6JLbWfICK3f8Mrz74xlSfR8zbn+A+ppMtAIJp8nzpsY8GT70eVWo+MQaa0kfAS7C/REAtYJ9AzAWP5oixPk0fO2Pcw6DHfkT7TtM3E6xcrY344Lgw12AVpNVHTBRoTTP0f588EnSQ6Pj+VTjfqLBvG7VHzGpkXI5xZB/f1TLwLsaE311MqiW2qbzheGZO0b8MsT1xPFuWGQuI8iIYJlGZ7UVuO3zJV3RssG4opffeRVS7Wehl+EVx6bhkbbAeJ6UpwwlrvEpqKKjY3YjpPnX9DkrL8VqgctEBQcI6gB9kfOLx4OyaH7gembMX4JWcLhjy5vw/MXC2zD8MvV+d13sAvwIRERgjj+d0NVELMBzkjg6Xo0+iXgdyo5GhgoQ+NcKWRwBOgZ4o8KdUSbxofSUACngOGh181v/K6ld5GAcMTVOOP2Gj4nY8p6BaUiKL9m820RgxYsSIESNGjBgxYsSIESNGjBgxYsSIAYD/AbSwBNFwHgTXAAAAAElFTkSuQmCC
+enabled: true
+description: Deploys a IAC cloud template and checks security policy through secure state.
+concurrency: 10
+input:
+  blueprintVersion: '1.4'
+  platform: aws
+_inputMeta:
+  blueprintVersion:
+    description: ''
+    mandatory: true
+  platform:
+    description: ''
+    mandatory: true
+workspace:
+  type: DOCKER
+  endpoint: Om Prem Docker
+  image: python
+  registry: ''
+  path: ''
+  autoCloneForTrigger: false
+  limits:
+    cpu: 1.0
+    memory: 512
+stageOrder:
+- Build
+- Secure Check
+- Approval
+stages:
+  Build:
+    taskOrder:
+    - Deploy
+    - Validate Resources Online
+    tasks:
+      Validate Resources Online:
+        type: CI
+        input:
+          steps:
+          - sleep 10
+          export: [
+            ]
+          artifacts: [
+            ]
+          process: [
+            ]
+      Deploy:
+        type: Blueprint
+        input:
+          action: CreateDeployment
+          deploymentName: ''
+          blueprint: hello world
+          version: ${input.blueprintVersion}
+          parameters:
+            count: 1
+            platform: ${input.platform}
+  Secure Check:
+    taskOrder:
+    - CSP login
+    - get rules
+    - Secure State Scan
+    - Parse Data
+    - Asses Risk Score
+    tasks:
+      Secure State Scan:
+        type: REST
+        input:
+          action: post
+          url: https://api.securestate.vmware.com/v2/findings/query
+          headers:
+            Accept: application/json
+            Content-Type: application/json
+            Authorization: bearer ${Secure Check.CSP login.output.responseJson.access_token}
+          payload: '{"filters":{ "status": "open", "cloudTags":{"Deployment": ["${Build.Deploy.output.deploymentId}"]},"riskScore":{"maxValue":
+            100,"minValue": 40}},"interval": "interval"}'
+      CSP login:
+        type: REST
+        input:
+          action: post
+          url: https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize
+          headers:
+            Accept: application/json
+            Content-Type: application/x-www-form-urlencoded
+          payload: refresh_token=${var.csp refresh token}
+      get rules:
+        type: REST
+        input:
+          action: get
+          url: https://api.securestate.vmware.com/v1/rules
+          headers:
+            Accept: application/json
+            Content-Type: application/json
+            Authorization: bearer ${Secure Check.CSP login.output.responseJson.access_token}
+          payload: ''
+      Parse Data:
+        type: Custom
+        preCondition: ${Secure Check.Secure State Scan.output.responseJson.totalCount} != 0
+        input:
+          name: Secure State Data
+          version: 2.0.0
+          properties:
+            violationInput: ${Secure Check.Secure State Scan.output.responseJson}
+            rulesInput: ${Secure Check.get rules.output.responseJson}
+      Asses Risk Score:
+        type: Custom
+        preCondition: ${Secure Check.Secure State Scan.output.responseJson.totalCount} != 0
+        input:
+          name: Risk Score check
+          version: '0.2'
+          properties:
+            risk: ${Secure Check.Parse Data.output.properties.risk}
+            limit: 70
+  Approval:
+    taskOrder:
+    - Approval if at Risk
+    tasks:
+      Approval if at Risk:
+        type: UserOperation
+        preCondition: ${Secure Check.Asses Risk Score.output.properties.failed} == "true"
+        input:
+          approvers:
+          - scott
+          approverGroups: [
+            ]
+          summary: output
+          description: ${Secure Check.Parse Data.output.properties.html}
+          sendemail: false
+          expiration: 3
+          expirationUnit: DAYS
+          pipelineName: ${name}
+          cancelPreviousPendingUserOp: false
